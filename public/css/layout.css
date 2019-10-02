@@ -1,0 +1,84 @@
+body {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.wrapper {
+  width: 500px;
+  margin: 0 auto;
+  padding: 50px;
+}
+
+.result {
+  min-height: 310px;
+  background-image: url("/img/illust.svg");
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-size: 250px;
+}
+
+.balloon {
+  position: relative;
+  width: 180px;
+  padding: 30px;
+  border: 3px solid #000;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+.balloon:after {
+  content: "";
+  position: absolute;
+  right: -20px;
+  top: 50px;
+  width: 0px;
+  height: 0px;
+  margin: auto;
+  border-style: solid;
+  border-color:  transparent transparent transparent #000;
+  border-width: 20px 0 20px 20px;
+}
+
+.result-paragraph {
+  margin: 0 0 30px;
+}
+
+.result-paragraph:last-child {
+  margin: 0;
+}
+
+.form {
+  width: 300px;
+  margin: 0 auto;
+}
+
+.form label {
+  display: block;
+  margin: 15px 0 5px;
+}
+
+.form input[type="text"],
+.form input[type="date"] {
+  width: 100%;
+  padding: 15px;
+  font-size: 16px;
+  border: 3px solid #999;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+.form input[type="submit"] {
+  display: block;
+  padding: 15px 30px;
+  margin: 15px auto 0;
+  font-size: 16px;
+  border-radius: 8px;
+  color: #fff;
+  background-color: #39cc00;
+  cursor: pointer;
+}
+
+.form input[type="submit"]:hover {
+    background-color: #00a000;
+}

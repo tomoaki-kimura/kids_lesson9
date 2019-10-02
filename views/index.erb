@@ -1,23 +1,37 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <meta charset="UTF-8">
-    <title>変数を使ってプログラミング</title>
-  </head>
-  <body>
-    <h3>ロボットにあなたの事を教えて下さい</h3>
-    <p>フォームの中にあなたの事を書いてみましょう。</p>
-
-    <img src="/robot.png" alt="ロボット画像">
-    <p>あなたの名前は<%= @name %>です。</p>
-    <p>誕生日は<%= @birth %>です。</p>
-    <p>すきな食べ物は<%= @food %>です。</p>
-
-    <form action="/" method="GET">
-      <label>あなたのお名前: <input type="text" name="name" placeholder="ここに名前を書いてください"></label>
-      <label>あなたの誕生日: <input type="date" name="birth" placeholder="ここに誕生日を書いてください"></label>
-      <label>好きな食べ物: <input type="text" name="food" placeholder="好きな食べ物を書いてください"></label>
-      <input type="submit" value="送信">
-    </form>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <title>自己紹介プログラム</title>
+  <link href="/css/layout.css" rel="stylesheet">
+</head>
+<body>
+<div class="wrapper">
+  <div class="result">
+    <div class="balloon">
+      <p class="result-paragraph">
+        そなたの名前は<br>
+        <%= @name %>
+      </p>
+      <p class="result-paragraph">
+        誕生日は<br>
+        <%= @birth %>
+      </p>
+      <p class="result-paragraph">
+        好きな食べ物は<br>
+        <%= @food %>
+      </p>
+    </div>
+  </div>
+  <form action="/" method="GET" class="form">
+    <label for="name-1">名前</label>
+    <input id="name-1" type="text" name="name" placeholder="ここに書いてみよう">
+    <label for="birth-1">誕生日</label>
+    <input id="birth-1" type="date" name="birth" placeholder="ここに誕生日を書いてみよう">
+    <label for="food-1">好きな食べ物</label>
+    <input id="food-1" type="text" name="food" placeholder="ここに書いてみよう">
+    <input type="submit" value="送信">
+  </form>
+</div>
+</body>
 </html>
